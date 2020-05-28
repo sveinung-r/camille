@@ -93,7 +93,7 @@ def process(series, window_length=3600, fs=5, sn_curve=None):
 
     samples = series.size
     window = math.ceil(window_length * fs)
-    n_windows = math.floor(samples / window)
+    n_windows = math.ceil(samples / window)
 
     damage = np.empty(n_windows)
     index = []
